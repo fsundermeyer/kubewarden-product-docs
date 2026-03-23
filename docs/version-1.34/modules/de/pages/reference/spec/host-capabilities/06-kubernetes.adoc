@@ -45,8 +45,8 @@ Vertraglich oder durch Konvention können Richtlinien die Informationen des Kube
 
 [,hcl]
 ----
-# API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+# API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -78,8 +78,8 @@ Verwenden Sie diese API-Funktion, um clusterweite Ressourcen abzurufen (z. B. Na
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -121,8 +121,8 @@ Verwenden Sie das `disable_cache` Feld, um den Cache zu umgehen, wenn frische Da
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group
-  # and `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group
+  # and `groupName/groupVersion` for all other groups
   "api_version": string,
   # Singular PascalCase name of the resource
   "kind": string,

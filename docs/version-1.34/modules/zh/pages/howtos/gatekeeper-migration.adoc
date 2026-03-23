@@ -69,7 +69,7 @@ spec:
       names:
         kind: K8sRequiredLabels
       validation:
-        # Schema for the `+parameters+` field
+        # Schema for the `parameters` field
         openAPIV3Schema:
           type: object
           properties:
@@ -129,8 +129,8 @@ msg := sprintf("you must provide labels: %v", [missing])
 ----
 opa build -t wasm -e policy/violation -o bundle.tar.gz policy.rego
 error: load error: 2 errors occurred during loading:
-policy.rego:3: rego_parse_error: `+if+` keyword is required before rule body
-policy.rego:3: rego_parse_error: `+contains+` keyword is required for partial set rules
+policy.rego:3: rego_parse_error: `if` keyword is required before rule body
+policy.rego:3: rego_parse_error: `contains` keyword is required for partial set rules
 make: *** [Makefile:4: policy.wasm] Error 1
 ----
 

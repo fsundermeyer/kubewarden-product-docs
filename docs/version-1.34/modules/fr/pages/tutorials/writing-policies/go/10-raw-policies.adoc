@@ -101,16 +101,16 @@ Vous devez déclarer un type `RawValidationRequest` personnalisé (créez un fic
 ----
 // RawValidationRequest represents the request that is sent to the validate function by the Policy Server.
 type RawValidationRequest struct {
-    Request Request `+json:"request"+`
+    Request Request `json:"request"`
     // Raw policies can have settings.
-    Settings Settings `+json:"settings"+`
+    Settings Settings `json:"settings"`
 }
 
 // Request represents the payload of the request.
 type Request struct {
-    User     string `+json:"user"+`
-    Action   string `+json:"action"+`
-    Resource string `+json:"resource"+`
+    User     string `json:"user"`
+    Action   string `json:"action"`
+    Resource string `json:"resource"`
 }
 ----
 
@@ -124,9 +124,9 @@ Ensuite, vous devez définir le type `Settings` et les fonctions `Valid` et `val
 ----
 // Settings represents the settings of the policy.
 type Settings struct {
-    ValidUsers     []string `+json:"validUsers"+`
-    ValidActions   []string `+json:"validActions"+`
-    ValidResources []string `+json:"validResources"+`
+    ValidUsers     []string `json:"validUsers"`
+    ValidActions   []string `json:"validActions"`
+    ValidResources []string `json:"validResources"`
 }
 
 // Valid returns true if the settings are valid.
@@ -283,12 +283,12 @@ Vous devez mettre à jour le type `Settings` avec les nouveaux champs :
 ----
 // Settings defines the settings of the policy.
 type Settings struct {
-    ValidUsers      []string `+json:"validUsers"+`
-    ValidActions    []string `+json:"validActions"+`
-    ValidResources  []string `+json:"validResources"+`
-    DefaultUser     string   `+json:"defaultUser"+`
-    DefaultAction   string   `+json:"defaultAction"+`
-    DefaultResource string   `+json:"defaultResource"+`
+    ValidUsers      []string `json:"validUsers"`
+    ValidActions    []string `json:"validActions"`
+    ValidResources  []string `json:"validResources"`
+    DefaultUser     string   `json:"defaultUser"`
+    DefaultAction   string   `json:"defaultAction"`
+    DefaultResource string   `json:"defaultResource"`
 }
 
 // Valid returns true if the settings are valid.

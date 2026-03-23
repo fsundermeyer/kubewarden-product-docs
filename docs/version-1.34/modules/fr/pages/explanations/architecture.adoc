@@ -103,9 +103,9 @@ graph LR
           k8s(("Kubernetes"))
           registry[("OCI registry")]
         fin
-        sous-graphe kw[&quot;`+**Admission Controller**+`&quot;]
-          contrôleur(&quot;`+**Controller**+`&quot;)
-          sous-graphe PolicyServer[&quot;`+**policy-server**+`&quot;]
+        sous-graphe kw["`**Admission Controller**`"]
+          contrôleur("`**Controller**`")
+          sous-graphe PolicyServer["`**policy-server**`"]
             direction LR
             kw-policy-1{{"Policy 1"}}
             kw-policy-2{{"Policy 2"}}

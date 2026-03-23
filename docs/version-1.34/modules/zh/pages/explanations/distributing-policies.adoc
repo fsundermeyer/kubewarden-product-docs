@@ -69,7 +69,7 @@ annotations:
 
     This policy accepts the following settings:
 
-    - `+invert_behavior+`: bool that inverts the policy behavior. If enabled, only palindrome names will be accepted.
+    - `invert_behavior`: bool that inverts the policy behavior. If enabled, only palindrome names will be accepted.
 ----
 
 现在，让我们注释策略：

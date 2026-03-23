@@ -45,8 +45,8 @@ Par contrat, ou par convention, les stratégies peuvent récupérer les informat
 
 [,hcl]
 ----
-# API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+# API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -78,8 +78,8 @@ Utilisez cette fonction API pour récupérer des ressources à l'échelle du clu
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -121,8 +121,8 @@ Utilisez le champ `disable_cache` pour contourner le cache lorsque des données 
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group
-  # and `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group
+  # and `groupName/groupVersion` for all other groups
   "api_version": string,
   # Singular PascalCase name of the resource
   "kind": string,

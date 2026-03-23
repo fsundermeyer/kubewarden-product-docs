@@ -101,16 +101,16 @@ Sie müssen einen benutzerdefinierten `RawValidationRequest` Typ deklarieren (er
 ----
 // RawValidationRequest represents the request that is sent to the validate function by the Policy Server.
 type RawValidationRequest struct {
-    Request Request `+json:"request"+`
+    Request Request `json:"request"`
     // Raw policies can have settings.
-    Settings Settings `+json:"settings"+`
+    Settings Settings `json:"settings"`
 }
 
 // Request represents the payload of the request.
 type Request struct {
-    User     string `+json:"user"+`
-    Action   string `+json:"action"+`
-    Resource string `+json:"resource"+`
+    User     string `json:"user"`
+    Action   string `json:"action"`
+    Resource string `json:"resource"`
 }
 ----
 
@@ -124,9 +124,9 @@ Dann müssen Sie den `Settings` Typ sowie die `Valid` und `validateSettings` Fun
 ----
 // Settings represents the settings of the policy.
 type Settings struct {
-    ValidUsers     []string `+json:"validUsers"+`
-    ValidActions   []string `+json:"validActions"+`
-    ValidResources []string `+json:"validResources"+`
+    ValidUsers     []string `json:"validUsers"`
+    ValidActions   []string `json:"validActions"`
+    ValidResources []string `json:"validResources"`
 }
 
 // Valid returns true if the settings are valid.
@@ -283,12 +283,12 @@ Sie müssen den `Settings` Typ mit den neuen Feldern aktualisieren:
 ----
 // Settings defines the settings of the policy.
 type Settings struct {
-    ValidUsers      []string `+json:"validUsers"+`
-    ValidActions    []string `+json:"validActions"+`
-    ValidResources  []string `+json:"validResources"+`
-    DefaultUser     string   `+json:"defaultUser"+`
-    DefaultAction   string   `+json:"defaultAction"+`
-    DefaultResource string   `+json:"defaultResource"+`
+    ValidUsers      []string `json:"validUsers"`
+    ValidActions    []string `json:"validActions"`
+    ValidResources  []string `json:"validResources"`
+    DefaultUser     string   `json:"defaultUser"`
+    DefaultAction   string   `json:"defaultAction"`
+    DefaultResource string   `json:"defaultResource"`
 }
 
 // Valid returns true if the settings are valid.

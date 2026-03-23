@@ -54,7 +54,7 @@ allOf:
     annotations:  # optional
       env: prod
 
-anyOf: # at least `+anyOf.minimumMatches+` are required to match
+anyOf: # at least `anyOf.minimumMatches` are required to match
   minimumMatches: 2 # default is 1
   signatures:
   - kind: pubKey
@@ -79,7 +79,7 @@ anyOf: # at least `+anyOf.minimumMatches+` are required to match
   - kind: genericIssuer
     issuer: https://token.actions.githubusercontent.com
     subject:
-      urlPrefix: https://github.com/bob # <- it will be post-fixed with `+/+` for security reasons
+      urlPrefix: https://github.com/bob # <- it will be post-fixed with `/` for security reasons
 ----
 
 == 签名配置参考
@@ -99,7 +99,7 @@ allOf:
     annotations:
       env: prod
 
-anyOf: # at least `+anyOf.minimumMatches+` are required to match
+anyOf: # at least `anyOf.minimumMatches` are required to match
   minimumMatches: 2 # default is 1
   signatures:
   - kind: pubKey
@@ -126,7 +126,7 @@ anyOf: # at least `+anyOf.minimumMatches+` are required to match
   - kind: genericIssuer
     issuer: https://token.actions.githubusercontent.com
     subject:
-      urlPrefix: https://github.com/kubewarden # <- it will be post-fixed with `+/+` for security reasons
+      urlPrefix: https://github.com/kubewarden # <- it will be post-fixed with `/` for security reasons
   - kind: githubAction
     owner: flavio   # mandatory
     repo: policy1 # optional

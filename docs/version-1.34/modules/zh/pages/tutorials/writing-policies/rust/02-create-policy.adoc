@@ -76,7 +76,7 @@ cargo generate --git https://github.com/kubewarden/rust-policy-template \
 
 [subs="+attributes",console]
 ----
-🔧   Creating project called `+demo+`...
+🔧   Creating project called `demo`...
 ✨   Done! New project created /<some-path-name>/demo
 ----
 

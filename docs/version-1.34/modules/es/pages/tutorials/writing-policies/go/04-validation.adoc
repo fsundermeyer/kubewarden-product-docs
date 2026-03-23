@@ -210,7 +210,7 @@ func TestValidateLabel(t *testing.T) {
             deniedLabels: mapset.NewThreadUnsafeSet[string]("hello"),
             constrainedLabels: map[string]*RegularExpression{
                 "cc-center": {
-                    Regexp: regexp.MustCompile(`+team-\d++`),
+                    Regexp: regexp.MustCompile(`team-\d+`),
                 },
             },
             expectedIsValid: true,
@@ -224,7 +224,7 @@ func TestValidateLabel(t *testing.T) {
             deniedLabels: mapset.NewThreadUnsafeSet[string]("hello"),
             constrainedLabels: map[string]*RegularExpression{
                 "cc-center": {
-                    Regexp: regexp.MustCompile(`+team-\d++`),
+                    Regexp: regexp.MustCompile(`team-\d+`),
                 },
             },
             expectedIsValid: false,
@@ -238,7 +238,7 @@ func TestValidateLabel(t *testing.T) {
             deniedLabels: mapset.NewThreadUnsafeSet[string]("hello"),
             constrainedLabels: map[string]*RegularExpression{
                 "cc-center": {
-                    Regexp: regexp.MustCompile(`+team-\d++`),
+                    Regexp: regexp.MustCompile(`team-\d+`),
                 },
             },
             expectedIsValid: false,

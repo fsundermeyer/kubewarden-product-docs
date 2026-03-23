@@ -78,7 +78,7 @@ function validate(): void {
     if (deniedHostnames.includes(hostname)) {
       writeOutput(
         Validation.Validation.rejectRequest(
-          `+Pod hostname '${hostname}' is not allowed. Denied hostnames: [${deniedHostnames.join(', ')}]+`
+          `Pod hostname '${hostname}' is not allowed. Denied hostnames: [${deniedHostnames.join(', ')}]`
         ),
       );
     } else {
@@ -86,7 +86,7 @@ function validate(): void {
     }
   } catch (err) {
     console.error('Validation error:', err);
-    writeOutput(Validation.Validation.rejectRequest(`+Validation failed: ${err}+`));
+    writeOutput(Validation.Validation.rejectRequest(`Validation failed: ${err}`));
   }
 }
 ----

@@ -72,15 +72,15 @@ La clé `settings` pointe vers un document JSON au format libre contenant les pa
     "subResource": "scale",
 
     # Fully-qualified group/version/kind of the incoming object in the original request to the API server.
-    # This only differs from `+kind+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `kind` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestKind": {"group":"autoscaling","version":"v1","kind":"Scale"},
     # Fully-qualified group/version/kind of the resource being modified in the original request to the API server.
-    # This only differs from `+resource+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `resource` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestResource": {"group":"apps","version":"v1","resource":"deployments"},
     # subresource, if the request is to a subresource
-    # This only differs from `+subResource+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `subResource` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestSubResource": "scale",
 
@@ -148,15 +148,15 @@ L'objet `ValidationRequest` ressemblerait à :
     "subResource": "scale",
 
     # Fully-qualified group/version/kind of the incoming object in the original request to the API server.
-    # This only differs from `+kind+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `kind` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestKind": {"group":"autoscaling","version":"v1","kind":"Scale"},
     # Fully-qualified group/version/kind of the resource being modified in the original request to the API server.
-    # This only differs from `+resource+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `resource` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestResource": {"group":"apps","version":"v1","resource":"deployments"},
     # subresource, if the request is to a subresource
-    # This only differs from `+subResource+` if the webhook specified `+matchPolicy: Equivalent+` and the
+    # This only differs from `subResource` if the webhook specified `matchPolicy: Equivalent` and the
     # original request to the API server was converted to a version the webhook registered for.
     "requestSubResource": "scale",
 

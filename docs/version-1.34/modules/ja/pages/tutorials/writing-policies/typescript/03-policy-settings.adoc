@@ -61,7 +61,7 @@ function validate(): void {
     // Policy logic...
   } catch (err) {
     console.error('Validation error:', err);
-    writeOutput(Validation.Validation.rejectRequest(`+Validation failed: ${err}+`));
+    writeOutput(Validation.Validation.rejectRequest(`Validation failed: ${err}`));
   }
 }
 ----
@@ -101,7 +101,7 @@ function validateSettings(): void {
     console.error('Settings validation error:', err);
     const errorResponse = new Validation.Validation.SettingsValidationResponse(
       false,
-      `+Settings validation failed: ${err}+`,
+      `Settings validation failed: ${err}`,
     );
     writeOutput(errorResponse);
   }

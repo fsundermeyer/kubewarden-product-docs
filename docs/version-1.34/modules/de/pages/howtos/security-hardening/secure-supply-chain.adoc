@@ -445,7 +445,7 @@ allOf: <1>
     annotations:
       env: prod
 
-anyOf: # at least `+anyOf.minimumMatches+` are required to match <2>
+anyOf: # at least `anyOf.minimumMatches` are required to match <2>
   minimumMatches: 2 # default is 1
   signatures:
   - kind: pubKey
@@ -472,7 +472,7 @@ anyOf: # at least `+anyOf.minimumMatches+` are required to match <2>
   - kind: genericIssuer
     issuer: https://token.actions.githubusercontent.com
     subject:
-      urlPrefix: https://github.com/kubewarden # <- it will be post-fixed with `+/+` for security reasons
+      urlPrefix: https://github.com/kubewarden # <- it will be post-fixed with `/` for security reasons
   - kind: githubAction
     owner: flavio   # mandatory
     repo: policy1 # optional

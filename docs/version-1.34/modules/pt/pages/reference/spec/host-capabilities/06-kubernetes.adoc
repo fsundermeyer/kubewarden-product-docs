@@ -45,8 +45,8 @@ Por contrato, ou por convenção, as políticas podem recuperar as informações
 
 [,hcl]
 ----
-# API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+# API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -78,8 +78,8 @@ Use esta função da API para buscar recursos em todo o cluster (por exemplo, na
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group and
-  # `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group and
+  # `groupName/groupVersion` for all other groups
   "api_version": string,
   # Resource kind
   "kind": string,
@@ -121,8 +121,8 @@ Use o campo `disable_cache` para ignorar o cache quando dados frescos forem nece
 [,hcl]
 ----
 {
-  # API Group version. Use `+v1+` for the `+core+` group
-  # and `+groupName/groupVersion+` for all other groups
+  # API Group version. Use `v1` for the `core` group
+  # and `groupName/groupVersion` for all other groups
   "api_version": string,
   # Singular PascalCase name of the resource
   "kind": string,

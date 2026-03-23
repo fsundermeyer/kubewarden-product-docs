@@ -273,7 +273,7 @@ verify_keyless_exact_match(
   # checks to be performed, e.g. ensuring
   # the signature has been produced during
   # the validity time frame of the cert.
-  # Recommended to set to `+true+`
+  # Recommended to set to `true`
   require_rekor_bundle: bool,
   # Optional:
   "annotations": [

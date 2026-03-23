@@ -76,7 +76,7 @@ Der Befehl erzeugt eine Ausgabe wie:
 
 [subs="+attributes",console]
 ----
-🔧   Creating project called `+demo+`...
+🔧   Creating project called `demo`...
 ✨   Done! New project created /<some-path-name>/demo
 ----
 

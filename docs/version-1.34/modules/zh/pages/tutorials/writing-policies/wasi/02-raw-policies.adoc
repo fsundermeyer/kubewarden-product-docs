@@ -56,16 +56,16 @@ include::partial$variables.adoc[]
 ----
 // RawValidationRequest represents the request that is sent to the validate function by the Policy Server.
 type RawValidationRequest struct {
-    Request Request `+json:"request"+`
+    Request Request `json:"request"`
     // Raw policies can have settings.
-    Settings Settings `+json:"settings"+`
+    Settings Settings `json:"settings"`
 }
 
 // Request represents the payload of the request.
 type Request struct {
-    User     string `+json:"user"+`
-    Action   string `+json:"action"+`
-    Resource string `+json:"resource"+`
+    User     string `json:"user"`
+    Action   string `json:"action"`
+    Resource string `json:"resource"`
 }
 ----
 
@@ -75,9 +75,9 @@ type Request struct {
 ----
 // Settings represents the settings of the policy.
 type Settings struct {
-    ValidUsers     []string `+json:"validUsers"+`
-    ValidActions   []string `+json:"validActions"+`
-    ValidResources []string `+json:"validResources"+`
+    ValidUsers     []string `json:"validUsers"`
+    ValidActions   []string `json:"validActions"`
+    ValidResources []string `json:"validResources"`
 }
 
 func validateSettings(input []byte) []byte {
@@ -171,12 +171,12 @@ func validateRequest(settings Settings, request Request) ValidationResponse {
 ----
 // Settings represents the settings of the policy.
 type Settings struct {
-    ValidUsers []string `+json:"validUsers"+`
-    ValidActions []string `+json:"validActions"+`
-    ValidResources []string `+json:"validResources"+`
-    DefaultUser string `+json:"defaultUser"+`
-    DefaultAction string `+json:"defaultAction"+`
-    DefaultResource string `+json:"defaultResource"+`
+    ValidUsers []string `json:"validUsers"`
+    ValidActions []string `json:"validActions"`
+    ValidResources []string `json:"validResources"`
+    DefaultUser string `json:"defaultUser"`
+    DefaultAction string `json:"defaultAction"`
+    DefaultResource string `json:"defaultResource"`
 }
 
 func validateCliSettings(settings *Settings) SettingsValidationResponse {
@@ -220,16 +220,16 @@ func validateCliSettings(settings *Settings) SettingsValidationResponse {
 ----
 // ValidationResponse defines the response given when validating a request
 type ValidationResponse struct {
-    Accepted bool `+json:"accepted"+`
+    Accepted bool `json:"accepted"`
     // Optional - ignored if accepted
-    Message *string `+json:"message,omitempty"+`
+    Message *string `json:"message,omitempty"`
     // Optional - ignored if accepted
-    Code *uint16 `+json:"code,omitempty"+`
+    Code *uint16 `json:"code,omitempty"`
     // Optional - used only by mutating policies
-    MutatedObject *Request `+json:"mutated_object,omitempty"+`
+    MutatedObject *Request `json:"mutated_object,omitempty"`
 }
 
-// MutateRequest accepts the request. The given `+mutatedObject+` is how
+// MutateRequest accepts the request. The given `mutatedObject` is how
 // the evaluated object must look once accepted
 func MutateRequest(mutatedObject *Request) ValidationResponse {
     return ValidationResponse{

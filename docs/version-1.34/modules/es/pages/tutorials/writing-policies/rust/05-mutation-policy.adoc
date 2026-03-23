@@ -138,7 +138,7 @@ failures:
 {"column":5,"file":"src/lib.rs","level":"info","line":34,"message":"starting validation","policy":"sample-policy"}
 thread 'tests::accept_pod_with_valid_name' panicked at src/lib.rs:98:9:
 Something mutated with test case: Pod creation with valid name
-note: run with `+RUST_BACKTRACE=1+` environment variable to display a backtrace
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 
 failures:
